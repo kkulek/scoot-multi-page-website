@@ -48,3 +48,28 @@ h2 {
     font-size: rem(48px);
   }
 }
+
+.container {
+  width: $containerWidth;
+  max-width: rem(1220px);
+  margin: 0 auto;
+}
+
+.button {
+  background-color: $primaryAccent;
+  padding: rem(20px) rem(45px);
+  color: white;
+}
+
+ //Visibility
+.hide-for-mobile {
+  @include breakpoint-down(small) {
+    display: none;
+  }
+}
+
+.hide-for-tablet-desktop {
+  @include breakpoint-up(medium) {
+    display: none;
+  }
+}
