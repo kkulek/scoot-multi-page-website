@@ -416,7 +416,6 @@ p {
 
 a {
   font-family: "Space Mono", sans-serif;
-  display: inline-block;
 }
 
 h1, h2, h3 {
@@ -447,7 +446,7 @@ h2 {
 
 .container {
   width: 90vw;
-  max-width: 68.75rem;
+  max-width: 76.25rem;
   margin: 0 auto;
 }
 
@@ -455,6 +454,7 @@ h2 {
   background-color: hsl(40deg, 97%, 58%);
   padding: 1.0625rem 2.5rem;
   color: white;
+  display: inline-block;
 }
 
 @media (max-width: 39.9375em) {
