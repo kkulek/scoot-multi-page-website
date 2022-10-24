@@ -411,6 +411,7 @@ p, a {
 
 p {
   font-family: "Lexend Deca", sans-serif;
+  line-height: 1.5625rem;
 }
 
 a {
@@ -562,6 +563,102 @@ h2 {
 @media (max-width: 63.9375em) {
   .header__button {
     padding: 0.875rem 1.375rem;
+  }
+}
+
+.hero {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../assets/images/home-hero-mobile.jpg");
+}
+@media (min-width: 40em) {
+  .hero {
+    background-image: url("../assets/images/home-hero-tablet.jpg");
+  }
+}
+@media (min-width: 64em) {
+  .hero {
+    background-image: url("../assets/images/home-hero-desktop.jpg");
+  }
+}
+@media (min-width: 40em) {
+  .hero:after {
+    content: url("../assets/patterns/white-circles.svg");
+    position: absolute;
+    right: -1.875rem;
+    bottom: 10%;
+  }
+}
+@media (min-width: 64em) {
+  .hero:after {
+    content: "";
+  }
+}
+@media (min-width: 87.5em) {
+  .hero:after {
+    content: url("../assets/patterns/white-circles.svg");
+    right: 5%;
+    bottom: 25%;
+  }
+}
+.hero__container {
+  text-align: center;
+  padding: 7.1875rem 1.25rem 11.25rem;
+}
+@media (min-width: 40em) {
+  .hero__container {
+    padding: 8.75rem 3.75rem 13.75rem;
+  }
+}
+@media (min-width: 64em) {
+  .hero__container {
+    max-width: 518px;
+    text-align: left;
+    padding: 9.375rem 0 9.375rem;
+  }
+}
+.hero__container h1, .hero__container p {
+  color: hsl(214deg, 37%, 96%);
+}
+.hero__content p {
+  position: relative;
+  margin: 1.875rem 0;
+}
+@media (min-width: 64em) {
+  .hero__content p {
+    margin: 2.5rem 0;
+  }
+}
+@media (min-width: 64em) {
+  .hero__content p:before {
+    content: url("../assets/patterns/line.svg");
+    position: absolute;
+    left: -55%;
+    top: 28%;
+  }
+  .hero__content p:after {
+    content: url("../assets/patterns/right-arrow.svg");
+    position: absolute;
+    left: 100%;
+    top: 30%;
+  }
+}
+@media (min-width: 64em) {
+  .hero__content {
+    margin-left: 6rem;
+  }
+}
+.hero__button {
+  position: relative;
+}
+@media (max-width: 63.9375em) {
+  .hero__button:after {
+    content: url("../assets/patterns/right-arrow.svg");
+    position: absolute;
+    left: -235%;
+    bottom: -300%;
   }
 }
 
