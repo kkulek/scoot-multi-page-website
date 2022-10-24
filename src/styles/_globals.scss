@@ -12,11 +12,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Lexend Deca', sans-serif;
-  font-size: rem(15px);
-  font-weight: 400;
-  color: $primaryFontLight;
-  line-height: 1.3;
+
   overflow-x: hidden;
 
   &.noscroll {
@@ -25,6 +21,21 @@ body {
 }
 
 // Text
+p, a {
+  font-size: rem(15px);
+  font-weight: 400;
+  color: $primaryFontLight;
+  line-height: 1.3;
+}
+
+p {
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+a {
+  font-family: 'Space Mono', sans-serif;
+}
+
 h1, h2 {
   font-weight: 700;
   line-height: 1.15;
@@ -57,11 +68,11 @@ h2 {
 
 .button {
   background-color: $primaryAccent;
-  padding: rem(20px) rem(45px);
+  padding: rem(17px) rem(40px);
   color: white;
 }
 
- //Visibility
+//Visibility
 .hide-for-mobile {
   @include breakpoint-down(small) {
     display: none;
