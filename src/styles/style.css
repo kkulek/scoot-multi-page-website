@@ -487,6 +487,7 @@ h2 {
   bottom: 0;
   left: 0;
   background: hsl(0deg, 0%, 20%);
+  z-index: 1;
 }
 .header__logo {
   margin: 0 auto;
@@ -530,6 +531,7 @@ h2 {
   height: calc(100vh - 4rem);
   background: hsl(215deg, 14%, 23%);
   width: 16rem;
+  z-index: 2;
 }
 .header__menu a {
   display: block;
