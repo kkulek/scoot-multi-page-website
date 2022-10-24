@@ -1,0 +1,104 @@
+.hero {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../assets/images/home-hero-mobile.jpg");
+
+  @include breakpoint-up(medium) {
+    background-image: url("../assets/images/home-hero-tablet.jpg");
+  }
+
+  @include breakpoint-up(large) {
+    background-image: url("../assets/images/home-hero-desktop.jpg");
+  }
+
+  //Circles tablet and desktop
+  @include breakpoint-up(medium) {
+    &:after {
+      content: url("../assets/patterns/white-circles.svg");
+      position: absolute;
+      right: rem(-30px);
+      bottom: 10%;
+    }
+  }
+
+  @include breakpoint-up(large) {
+    &:after {
+      content: '';
+    }
+  }
+
+  @include breakpoint-up(xlarge) {
+    &:after {
+      content: url("../assets/patterns/white-circles.svg");
+      right: 5%;
+      bottom: 25%;
+    }
+  }
+
+  &__container {
+    text-align: center;
+    padding: rem(115px) rem(20px) rem(180px);
+
+    @include breakpoint-up(medium) {
+      padding: rem(140px) rem(60px) rem(220px);
+    }
+
+    @include breakpoint-up(large) {
+      max-width: 518px;
+      text-align: left;
+      padding: rem(150px) 0 rem(150px);
+    }
+
+    h1, p {
+      color: $neutralLightest;
+    }
+  }
+
+  &__content {
+    p {
+      position: relative;
+      margin: rem(30px) 0;
+
+      @include breakpoint-up(large) {
+        margin: rem(40px) 0;
+      }
+
+      //Arrows desktop
+      @include breakpoint-up(large) {
+        &:before {
+          content: url("../assets/patterns/line.svg");
+          position: absolute;
+          left: -55%;
+          top: 28%;
+        }
+
+        &:after {
+          content: url("../assets/patterns/right-arrow.svg");
+          position: absolute;
+          left: 100%;
+          top: 30%;
+        }
+      }
+    }
+
+    @include breakpoint-up(large) {
+      margin-left: rem(96px);
+    }
+  }
+
+  //Arrow mobile & tablet
+  &__button {
+    position: relative;
+
+    @include breakpoint-down(medium) {
+      &:after {
+        content: url("../assets/patterns/right-arrow.svg");
+        position: absolute;
+        left: -235%;
+        bottom: -300%;
+      }
+    }
+  }
+}
