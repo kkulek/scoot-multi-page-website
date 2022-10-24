@@ -416,6 +416,7 @@ p {
 
 a {
   font-family: "Space Mono", sans-serif;
+  display: inline-block;
 }
 
 h1, h2, h3 {
@@ -446,7 +447,7 @@ h2 {
 
 .container {
   width: 90vw;
-  max-width: 76.25rem;
+  max-width: 68.75rem;
   margin: 0 auto;
 }
 
@@ -587,7 +588,7 @@ h2 {
   .hero:after {
     content: url("../assets/patterns/white-circles.svg");
     position: absolute;
-    right: -1.875rem;
+    right: 0;
     bottom: 10%;
   }
 }
@@ -599,8 +600,8 @@ h2 {
 @media (min-width: 87.5em) {
   .hero:after {
     content: url("../assets/patterns/white-circles.svg");
-    right: 5%;
-    bottom: 22%;
+    right: 2%;
+    bottom: 25.5%;
   }
 }
 .hero__container {
@@ -832,6 +833,74 @@ h2 {
   }
 }
 
+.benefits {
+  margin-bottom: 12.5rem;
+}
+.benefits__benefit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+@media (min-width: 64em) {
+  .benefits__benefit {
+    flex-direction: row-reverse;
+    text-align: left;
+  }
+  .benefits__benefit:nth-of-type(2) {
+    flex-direction: row;
+  }
+}
+.benefits__benefit:not(:last-of-type) {
+  margin-bottom: 100px;
+}
+.benefits__content {
+  flex-basis: 45%;
+}
+@media (min-width: 64em) {
+  .benefits__content {
+    width: 43%;
+  }
+}
+.benefits__content h2 {
+  margin-bottom: 1.5rem;
+}
+.benefits__content p {
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 64em) {
+  .benefits__content p {
+    padding-right: 5rem;
+  }
+}
+.benefits__visual {
+  display: inline-block;
+  width: 311px;
+  height: 311px;
+  flex-basis: 311px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+}
+@media (min-width: 64em) {
+  .benefits__visual {
+    width: 445px;
+    height: 445px;
+    flex-basis: 445px;
+  }
+}
+.benefits__visual--telemetry {
+  background-image: url("../assets/images/telemetry.jpg");
+}
+.benefits__visual--city {
+  background-image: url("../assets/images/near-you.jpg");
+}
+.benefits__visual--payments {
+  background-image: url("../assets/images/payments.jpg");
+}
 .cta {
   background-color: hsl(216deg, 17%, 35%);
   background-image: url("../assets/patterns/semi-circles.svg");
