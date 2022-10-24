@@ -1,3 +1,4 @@
+//Section Hero
 .hero {
   position: relative;
   background-repeat: no-repeat;
@@ -18,7 +19,7 @@
     &:after {
       content: url("../assets/patterns/white-circles.svg");
       position: absolute;
-      right: rem(-30px);
+      right: 0;
       bottom: 10%;
     }
   }
@@ -32,8 +33,8 @@
   @include breakpoint-up(xlarge) {
     &:after {
       content: url("../assets/patterns/white-circles.svg");
-      right: 5%;
-      bottom: 22%;
+      right: 2%;
+      bottom: 25.5%;
     }
   }
 
@@ -103,6 +104,7 @@
   }
 }
 
+//Section Features
 .features {
   position: relative;
 
@@ -141,6 +143,7 @@
       width: 56%
     }
   }
+
   //Desktop horizontal line across features end
 
   &__container {
@@ -226,7 +229,6 @@
       background-image: url("../assets/icons/ride.svg");
     }
 
-
     //Tablet vertical line across features start
     &--line {
       &:after {
@@ -247,6 +249,7 @@
         }
       }
     }
+
     //Tablet vertical line across features end
   }
 
@@ -267,6 +270,105 @@
       @include breakpoint-up(large) {
         margin-bottom: rem(32px);
       }
+    }
+  }
+}
+
+//Section Benefits
+.benefits {
+  margin-bottom: rem(200px);
+
+  &__list {
+  }
+
+  &__benefit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+
+    @include breakpoint-up(large) {
+      flex-direction: row-reverse;
+      text-align: left;
+
+      &:nth-of-type(2) {
+        flex-direction: row;
+      }
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__content {
+    $margin-bottom: rem(32px);
+    flex-basis: 45%;
+
+    @include breakpoint-up(medium) {
+      $margin-bottom: rem(70px);
+    }
+
+    @include breakpoint-up(large) {
+      $margin-bottom: rem(24px);
+      width: 43%;
+    }
+
+
+    h2 {
+      margin-bottom: $margin-bottom;
+    }
+
+    p {
+      margin-bottom: $margin-bottom;
+
+      @include breakpoint-up(large) {
+        padding-right: rem(80px);
+      }
+
+    }
+
+    a {
+
+    }
+  }
+
+  &__visual {
+    display: inline-block;
+    width: 311px;
+    height: 311px;
+    flex-basis: 311px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+    position: relative;
+
+    @include breakpoint-up(large) {
+      width: 445px;
+      height: 445px;
+      flex-basis: 445px;
+    }
+
+    &--telemetry {
+      background-image: url("../assets/images/telemetry.jpg");
+    }
+
+    &--city {
+      background-image: url("../assets/images/near-you.jpg");
+    }
+
+    &--payments {
+      background-image: url("../assets/images/payments.jpg");
+    }
+
+    &:before {
+
+    }
+
+    &:after {
+
     }
   }
 }
