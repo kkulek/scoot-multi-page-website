@@ -1,0 +1,57 @@
+.cta {
+  background-color: $primaryFontDark;
+  background-image: url("../assets/patterns/semi-circles.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  @include breakpoint-up(large) {
+    background-position-x: right;
+  }
+
+    .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: rem(90px) 0;
+
+    @include breakpoint-up(large) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  h3 {
+    text-align: center;
+    color: $neutralLightest;
+    font-size: rem(32px);
+    padding: 0 rem(32px);
+
+    @include breakpoint-up(medium) {
+      font-size: rem(48px);
+      padding: 0 rem(120px);
+    }
+
+    @include breakpoint-up(large) {
+      text-align: left;
+      padding: 0 rem(120px) 0 0;
+      max-width: 25ch;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-shrink: 0;
+  }
+
+  &__icon {
+    max-height: rem(40px);
+    width: 100%;
+
+    @include breakpoint-up(medium) {
+      max-height: rem(56px);
+    }
+  }
+}
