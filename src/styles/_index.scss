@@ -33,7 +33,7 @@
     &:after {
       content: url("../assets/patterns/white-circles.svg");
       right: 5%;
-      bottom: 25%;
+      bottom: 22%;
     }
   }
 
@@ -98,6 +98,174 @@
         position: absolute;
         left: -235%;
         bottom: -300%;
+      }
+    }
+  }
+}
+
+.features {
+  position: relative;
+
+  //Desktop horizontal line across features start
+  &:before {
+    @include breakpoint-up(large) {
+      content: '';
+      position: absolute;
+      top: rem(40px);
+      left: 0;
+      height: rem(15px);
+      width: 70%;
+      background: $neutralLight;
+      z-index: -1;
+    }
+
+    @include breakpoint-up(xlarge) {
+      top: rem(40px);
+      left: 0;
+      width: 68%;
+    }
+
+    @media (min-width: 2000px) {
+      width: 65%
+    }
+    @media (min-width: 2300px) {
+      width: 63%
+    }
+    @media (min-width: 2650px) {
+      width: 60%
+    }
+    @media (min-width: 3450px) {
+      width: 58%
+    }
+    @media (min-width: 4300px) {
+      width: 56%
+    }
+  }
+  //Desktop horizontal line across features end
+
+  &__container {
+    margin-top: rem(120px);
+    margin-bottom: rem(120px);
+
+    @include breakpoint-up(medium) {
+      margin-bottom: rem(145px);
+    }
+
+    @include breakpoint-up(medium) {
+      margin-top: rem(160px);
+      margin-bottom: rem(200px);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: rem(50px);
+
+    @include breakpoint-up(medium) {
+      text-align: left;
+    }
+
+    @include breakpoint-up(large) {
+      flex-direction: row;
+      align-items: baseline;
+      gap: rem(72px);
+    }
+  }
+
+  &__feature {
+    display: flex;
+    flex-direction: column;
+    gap: rem(30px);
+
+    @include breakpoint-up(medium) {
+      flex-direction: row;
+      justify-content: center;
+      gap: rem(80px);
+    }
+
+    @include breakpoint-up(large) {
+      flex-direction: column;
+      gap: 0;
+      width: 30%;
+    }
+  }
+
+  &__icon {
+    $iconTabletDesktopSize: rem(96px);
+    display: flex;
+    flex-shrink: 0;
+    align-self: center;
+    height: rem(56px);
+    width: rem(56px);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+
+    @include breakpoint-up(medium) {
+      height: $iconTabletDesktopSize;
+      width: $iconTabletDesktopSize;
+    }
+
+    @include breakpoint-up(large) {
+      align-self: flex-start;
+      margin-bottom: rem(40px);
+    }
+
+    &--locate {
+      background-image: url("../assets/icons/locate.svg");
+    }
+
+    &--scooter {
+      background-image: url("../assets/icons/scooter.svg");
+    }
+
+    &--ride {
+      background-image: url("../assets/icons/ride.svg");
+    }
+
+
+    //Tablet vertical line across features start
+    &--line {
+      &:after {
+        @include breakpoint-up(medium) {
+          content: '';
+          position: absolute;
+          top: -190px;
+          right: 0;
+          width: 15px;
+          height: 630px;
+          transform: translate(calc(($iconTabletDesktopSize / -2) + 50%));
+          background-color: $neutralLight;
+          z-index: -1;
+        }
+
+        @include breakpoint-up(large) {
+          content: none;
+        }
+      }
+    }
+    //Tablet vertical line across features end
+  }
+
+  &__content {
+    max-width: 400px;
+    align-self: center;
+
+    &--title {
+      font-size: rem(24px);
+      font-family: 'Space Mono', sans-serif;
+      color: $primaryFontDark;
+      margin-bottom: rem(24px);
+
+      @include breakpoint-up(medium) {
+        margin-bottom: rem(27px);
+      }
+
+      @include breakpoint-up(large) {
+        margin-bottom: rem(32px);
       }
     }
   }
