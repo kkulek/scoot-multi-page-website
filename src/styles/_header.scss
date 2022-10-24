@@ -9,6 +9,8 @@ $headerHeightTableTDesktop: rem(96px);
 
   @include breakpoint-up(medium) {
     height: $headerHeightTableTDesktop;
+    justify-content: space-between;
+    gap: 2rem;
   }
 
   .overlay {
@@ -27,7 +29,6 @@ $headerHeightTableTDesktop: rem(96px);
     @include breakpoint-up(medium) {
       margin: 0;
     }
-
   }
 
   //Hamburger start
@@ -98,10 +99,21 @@ $headerHeightTableTDesktop: rem(96px);
   }
   //Hamburger end
 
-  &__link {
-    &:not(:last-of-type) {
-      margin-right: 1rem;
-      align-self: flex-start;
+  &__links {
+    justify-self: flex-start;
+    flex-grow: 2;
+    margin-left: 1.5rem;
+  }
+
+  &__links &__link {
+    &:not(:first-of-type) {
+      margin-left: 1rem;
+    }
+  }
+
+  &__button {
+    @include breakpoint-down(medium) {
+      padding: rem(14px) rem(22px);
     }
   }
 }
