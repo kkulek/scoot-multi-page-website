@@ -1,3 +1,4 @@
+//Hamburger menu
 const btnHamburger = document.querySelector('#buttonHamburger');
 const header = document.querySelector('.header');
 const body = document.querySelector('body');
@@ -19,4 +20,20 @@ btnHamburger.addEventListener('click', function () { //close Hamburger menu
             element.classList.remove('fade-out');
         });
     }
+});
+
+// FAQ
+const buttons = document.querySelectorAll(".faq__question");
+
+buttons.forEach((question) => {
+    question.onclick = function () {
+        this.classList.toggle("is-open");
+        let answer = this.nextElementSibling;
+
+        if (answer.style.maxHeight) {
+            answer.style.maxHeight = null;
+        } else {
+            answer.style.maxHeight = answer.scrollHeight + "px";
+        }
+    };
 });

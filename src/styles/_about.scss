@@ -30,9 +30,7 @@
 
 .values {
   text-align: center;
-
-  &__title {
-  }
+  margin-bottom: rem(145px);
 
   &__list {
     display: flex;
@@ -118,13 +116,110 @@
     font-size: rem(24px);
     font-family: $font-accent;
     color: $primaryFontDark;
+
+    @include breakpoint-down(small) {
+      margin-top: rem(20px);
+    }
   }
 
   &__body {
     max-width: rem(400px);
+    margin-top: rem(20px);
 
     @include breakpoint-up(large) {
       max-width: 100%;
     }
+  }
+}
+
+.faq {
+  $inner-padding-accordion: rem(32px);
+  $padding-twice: calc(2 * $inner-padding-accordion);
+  margin-bottom: rem(120px);
+
+  &__title {
+    text-align: center;
+    font-size: rem(32px);
+    margin-bottom: rem(48px);
+
+    @include breakpoint-up(medium) {
+      font-size: rem(48px);
+      margin-bottom: rem(64px);
+    }
+  }
+
+  &__category {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: rem(40px);
+
+    @include breakpoint-up(medium) {
+      margin-bottom: rem(64px);
+    }
+
+    @include breakpoint-up(large) {
+      flex-direction: row;
+    }
+  }
+
+  &__name {
+    font-size: rem(24px);
+    text-align: center;
+    flex-basis: 40%;
+    margin-bottom: rem(32px);
+
+    @include breakpoint-up(medium) {
+      font-size: rem(40px);
+    }
+
+    @include breakpoint-up(large) {
+      text-align: left;
+    }
+  }
+
+  &__q-and-a {
+    flex-basis: 60%;
+  }
+
+  &__element {
+    margin-bottom: rem(16px);
+  }
+
+  &__question {
+    position: relative;
+    padding: $inner-padding-accordion;
+    padding-right: $padding-twice; //using only shorthand it'd be less readable
+    font-size: rem(18px);
+    background-color: $neutralLightest;
+    transition: background-color 0.2s linear;
+    cursor: pointer;
+
+    @include breakpoint-up(medium) {
+      font-size: rem(24px);
+    }
+
+    &:after {
+      content: url("../assets/icons/chevron.svg");
+      position: absolute;
+      top: 50%;
+      right: $inner-padding-accordion;
+      transform: translateY(-50%);
+    }
+
+    &.is-open:after {
+      transform: translateY(-50%) rotate(180deg) ;
+    }
+
+    &:hover {
+      background-color: $neutralAccent;
+    }
+  }
+
+  &__answer {
+    background-color: $neutralLightest;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+    padding: 0 $padding-twice 0 $inner-padding-accordion;
   }
 }
