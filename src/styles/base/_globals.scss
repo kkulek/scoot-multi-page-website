@@ -64,7 +64,13 @@ h2 {
 .container {
   width: $containerWidth;
   max-width: rem(1220px);
+  padding: 0 rem(50px);
   margin: 0 auto;
+
+@include breakpoint-up(large) {
+  padding: 0;
+}
+
 }
 
 .button {
