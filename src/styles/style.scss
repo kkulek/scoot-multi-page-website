@@ -1,11 +1,11 @@
-@import "reset";
+@import "base/reset";
 
-@import 'variables';
-@import 'mixins';
-@import 'animations';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/animations';
 
-@import 'globals';
-@import 'header';
+@import 'base/globals';
+@import 'components/header';
 @import 'index';
-@import 'bottom-cta';
-@import 'footer';
+@import 'components/bottom-cta';
+@import 'components/footer';
