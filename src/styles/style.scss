@@ -2,10 +2,12 @@
 
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
+@import 'abstracts/functions';
 @import 'abstracts/animations';
 
 @import 'base/globals';
 @import 'components/header';
 @import 'index';
+@import 'about';
 @import 'components/bottom-cta';
 @import 'components/footer';

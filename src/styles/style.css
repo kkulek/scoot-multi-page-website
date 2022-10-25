@@ -927,6 +927,47 @@ h2 {
   background-image: url("../assets/images/payments.jpg");
 }
 
+.title {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 10rem;
+  background-image: url("../assets/images/about-hero-mobile.jpg");
+}
+@media (min-width: 40em) {
+  .title {
+    background-image: url("../assets/images/about-hero-tablet.jpg");
+    height: 12.5rem;
+  }
+  .title:after {
+    content: url("../assets/patterns/white-circles.svg");
+    position: absolute;
+    top: 50%;
+    right: -1.25rem;
+    transform: translateY(-50%);
+  }
+}
+@media (min-width: 64em) {
+  .title {
+    background-image: url("../assets/images/about-hero-desktop.jpg");
+  }
+}
+.title__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+@media (min-width: 40em) {
+  .title__container {
+    justify-content: flex-start;
+  }
+}
+.title h1 {
+  color: hsl(214deg, 37%, 96%);
+}
+
 .cta {
   background-color: hsl(216deg, 17%, 35%);
   background-image: url("../../assets/patterns/semi-circles.svg");
