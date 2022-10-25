@@ -1,0 +1,94 @@
+////Benefits
+.benefits {
+  margin-bottom: rem(200px);
+
+  &__benefit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+
+    @include breakpoint-up(large) {
+      flex-direction: row-reverse;
+      text-align: left;
+
+      &:nth-of-type(2) {
+        flex-direction: row;
+      }
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__content {
+    flex-basis: 45%;
+    max-width: rem(450px);
+
+    @include breakpoint-up(large) {
+      max-width: 100%;
+    }
+
+    h2, p {
+      margin-bottom:rem(32px);
+    }
+
+    @include breakpoint-up(medium) {
+      h2, p {
+        margin-bottom: rem(40px);
+      }
+    }
+
+    @include breakpoint-up(large) {
+      h2, p {
+        margin-bottom: rem(24px);
+      }
+
+      p {
+        padding-right: rem(80px);
+      }
+    }
+  }
+
+  &__visual {
+    display: inline-block;
+    position: relative;
+    flex-shrink: 0;
+    width: 311px;
+    height: 311px;
+    flex-basis: 311px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin-bottom: rem(50px);
+
+    @include breakpoint-up(medium) {
+      width: 445px;
+      height: 445px;
+      flex-basis: 445px;
+      margin-bottom: rem(60px);
+
+      &:before { //Top and bottom circle tablet & desktop
+        position: absolute;
+        right: -115%;
+        top: 0;
+      }
+
+      &--city:before {
+        left: -225%;
+        right: 0;
+      }
+    }
+
+    @include breakpoint-up(large) {
+      margin-bottom: 0;
+
+      &--city:before {
+        left: -115%; //Middle circle desktop
+      }
+    }
+
+  }
+}
