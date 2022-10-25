@@ -276,28 +276,6 @@
 
 //Section Benefits
 .benefits {
-  margin-bottom: rem(200px);
-
-  &__benefit {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-
-    @include breakpoint-up(large) {
-      flex-direction: row-reverse;
-      text-align: left;
-
-      &:nth-of-type(2) {
-        flex-direction: row;
-      }
-    }
-
-    &:not(:last-of-type) {
-      margin-bottom: 100px;
-    }
-  }
 
   &__content {
     flex-basis: 45%;
@@ -329,33 +307,11 @@
   }
 
   &__visual {
-    display: inline-block;
-    position: relative;
-    flex-shrink: 0;
-    width: 311px;
-    height: 311px;
-    flex-basis: 311px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-    margin-bottom: rem(50px);
-
     @include breakpoint-up(medium) {
-      width: 445px;
-      height: 445px;
-      flex-basis: 445px;
       margin-bottom: rem(60px);
 
       &:before { //Top and bottom circle tablet & desktop
         content: url("../assets/patterns/circle.svg");
-        position: absolute;
-        right: -115%;
-        top: 0;
-      }
-
-      &--city:before {
-        left: -345%; //Middle circle tablet
-        right: 0;
       }
     }
 
@@ -373,6 +329,7 @@
 
     &--city {
       background-image: url("../assets/images/near-you.jpg");
+
     }
 
     &--payments {

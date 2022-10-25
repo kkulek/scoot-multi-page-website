@@ -1,0 +1,60 @@
+@include subpage-title(careers);
+
+.benefits {
+  &__visual {
+    &--mission {
+      background-image: url("../assets/images/join-us.jpg");
+    }
+  }
+}
+
+.jobs {
+  margin-bottom: rem(120px);
+
+  @include breakpoint-up(large) {
+    margin-bottom: rem(160px);;
+  }
+
+  &__content {
+    text-align: center;
+    margin-bottom: rem(16px);
+
+    @include breakpoint-up(medium) {
+      text-align: left;
+      margin-bottom: 0;
+    }
+  }
+
+  &__job {
+    display: flex;
+    flex-direction: column;
+    background-color: $neutralLightest;
+    align-items: center;
+    justify-content: space-between;
+    padding: 36px 32px 32px 32px;
+    margin-bottom: rem(16px);
+
+    @include breakpoint-up(medium) {
+      flex-direction: row;
+    }
+
+    @include breakpoint-up(large) {
+      margin-bottom: rem(24px);
+    }
+
+    h3 {
+      font-size: rem(24px);
+      margin-bottom: rem(6px);
+    }
+  }
+
+  &__button {
+    padding: rem(15px) rem(56px);
+    width: 90%;
+    max-width: 300px;
+
+    @include breakpoint-up(medium) {
+      width: rem(180px);
+    }
+  }
+}

@@ -1,0 +1,106 @@
+//Values
+
+.values {
+  text-align: center;
+  margin-bottom: rem(145px);
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include breakpoint-up(large) {
+      flex-direction: row;
+      gap: 5rem;
+    }
+  }
+
+  &__value {
+    $orange-circle-size: rem(96px);
+    $image-circle-size: rem(240px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    margin-top: calc($orange-circle-size + $image-circle-size);
+
+    @include breakpoint-up(medium) {
+      padding-top: rem(32px);
+    }
+
+    &:before {
+      content: '01';
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: $orange-circle-size;
+      height: $orange-circle-size;
+      border-radius: 50%;
+      font-size: rem(24px);
+      font-family: $font-accent;
+      color: $neutralLightest;
+      background-color: $primaryAccent;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -100%);
+      z-index: 1;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: calc($orange-circle-size / -2);
+      left: 50%;
+      width: $image-circle-size;
+      height: $image-circle-size;
+      border-radius: 50%;
+      background-image: url("../assets/images/our-tech.jpg");
+      //background-image: url("../../assets/images/our-tech.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      transform: translate(-50%, -100%);
+    }
+  }
+
+  &__value:nth-of-type(2) {
+    &:before {
+      content: '02';
+    }
+
+    &:after {
+      background-image: url("../assets/images/our-integrity.jpg");
+    }
+  }
+
+  &__value:nth-of-type(3) {
+    &:before {
+      content: '03';
+    }
+
+    &:after {
+      background-image: url("../assets/images/our-community.jpg");
+    }
+  }
+
+  &__name {
+    font-size: rem(24px);
+    font-family: $font-accent;
+    color: $primaryFontDark;
+
+    @include breakpoint-down(small) {
+      margin-top: rem(20px);
+    }
+  }
+
+  &__body {
+    max-width: rem(400px);
+    margin-top: rem(20px);
+
+    @include breakpoint-up(large) {
+      max-width: 100%;
+    }
+  }
+}

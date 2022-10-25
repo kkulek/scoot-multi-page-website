@@ -1,89 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Space+Mono:wght@700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./js/script.js" async defer></script>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Scoot with us | Careers</title>
+    <title>Scoot with us | Scoot About</title>
 </head>
 <body>
+<header class="header container hide-for-tablet-desktop">
+    <div class="overlay has-fade hide-for-tablet-desktop"></div>
+    <a id="buttonHamburger" class="header__toggle hide-for-tablet-desktop" href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+    <a class="header__logo logo" href="./index.html">
+        <img src="./assets/logo.svg" alt="Scoot logo">
+    </a>
+    <nav class="header__links hide-for-mobile">
+        <a class="header__link" href="./about.html">About</a>
+        <a class="header__link" href="./locations.html">Location</a>
+        <a class="header__link" href="./careers.html">Careers</a>
+    </nav>
+    <a class="header__button button hide-for-mobile" href="#">Get Scootin</a>
 
-  About
-  Location
-  Careers
+    <nav class="header__menu has-fade hide-for-tablet-desktop">
+        <a class="header__link" href="./about.html">About</a>
+        <a class="header__link" href="./locations.html">Location</a>
+        <a class="header__link" href="./careers.html">Careers</a>
+        <a class="header__link button" href="#">Get Scootin</a>
+    </nav>
+</header>
+<main>
+    <section class="title">
+        <div class="title__container container">
+            <h1>Careers</h1>
+        </div>
+    </section>
+    <section class="benefits">
+        <div class="benefits__container container">
+            <ul class="benefits__list">
+                <li class="benefits__benefit">
+                    <span class="benefits__visual benefits__visual--mission"></span>
+                    <div class="benefits__content">
+                        <h2 class="benefits__title">Care to join our mission?</h2>
+                        <p class="benefits__body">We’re always looking for ambitious individuals to help us on our
+                            journey. If you’re
+                            passionate about our mission to provide clean, accessible transport to improve urban
+                            living we want to hear from you!</p>
+                        <a class="benefits__button button" href="#">Learn More</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="values">
+        <div class="values__container container">
+            <h2 class="values__title">
+                Our Values
+            </h2>
+            <div class="values__list">
+                <div class="values__value">
+                    <p class="values__name">Our tech</p>
+                    <p class="values__body">We’re using cutting edge technology to drive accessible urban transportation
+                        forward.
+                        Our fully electric scooters are a joy to ride!</p>
+                </div>
+                <div class="values__value">
+                    <p class="values__name">Our integrity</p>
+                    <p class="values__body">We are fully committed to deliver a great yet safe, sustainable
+                        micro-mobility experience
+                        in every city we serve.</p>
+                </div>
+                <div class="values__value">
+                    <p class="values__name">Our community</p>
+                    <p class="values__body">We support every community we serve. All workers are paid a living wage
+                        based on their
+                        location and are Scoot employees.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="jobs">
+        <div class="jobs__container container">
+            <div class="jobs__job">
+                <div class="jobs__content">
+                    <h3>General Manager</h3>
+                    <p>Jakarta, Indonesia</p>
+                </div>
+                <a class="jobs__button button" href="#">Apply</a>
+            </div>
+            <div class="jobs__job">
+                <div class="jobs__content">
+                    <h3>UI/UX Designer</h3>
+                    <p>Yokohama, Japan</p>
+                </div>
+                <a class="jobs__button button" href="#">Apply</a>
+            </div>
+            <div class="jobs__job">
+                <div class="jobs__content">
+                    <h3>Blog Content Copywriter</h3>
+                    <p>New York, United States</p>
+                </div>
+                <a class="jobs__button button" href="#">Apply</a>
+            </div>
+            <div class="jobs__job">
+                <div class="jobs__content">
+                    <h3>Graphic Designer</h3>
+                    <p>New York, United States</p>
+                </div>
+                <a class="jobs__button button" href="#">Apply</a>
+            </div>
+            <div class="jobs__job">
+                <div class="jobs__content">
+                    <h3>Fleet Supervisor</h3>
+                    <p>Jakarta, Indonesia</p>
+                </div>
+                <a class="jobs__button button" href="#">Apply</a>
+            </div>
+            <div class="jobs__job">
+                <div class="jobs__content">
+                    <h3>UX Analyst</h3>
+                    <p>London, United Kingdom</p>
+                </div>
+                <a class="jobs__button button" href="#">Apply</a>
+            </div>
+        </div>
+    </section>
 
-  Get Scootin
+    <section class="cta">
+        <div class="container">
+            <h3>Sign up and Scoot off today</h3>
+            <div class="cta__icons">
+                <a href="#"><img class="cta__icon cta__icon--app-store" src="./assets/icons/app-store.svg"
+                                 alt="Available on the App Store"></a>
+                <a href="#"><img class="cta__icon cta__icon--google-play" src="./assets/icons/google-play.svg"
+                                 alt="Available on the Google Play"></a>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="footer container">
+        <a class="footer__logo logo" href="./index.html">
+            <img src="./assets/logo.svg" alt="Scoot logo">
+        </a>
+        <nav class="footer__links">
+            <a class="footer__link" href="./about.html">About</a>
+            <a class="footer__link" href="./locations.html">Location</a>
+            <a class="footer__link" href="./careers.html">Careers</a>
+        </nav>
+        <div class="footer__social-media">
+            <a href="#"><img class="footer__icon footer__icon--facebook" src="./assets/icons/facebook.svg"
+                             alt="facebook"></a>
+            <a href="#"><img class="footer__icon footer__icon--twitter" src="./assets/icons/twitter.svg" alt="twitter"></a>
+            <a href="#"><img class="footer__icon footer__icon--instagram" src="./assets/icons/instagram.svg"
+                             alt="instagram"></a>
+        </div>
+    </div>
+</footer>
 
 
 
-  Careers
 
 
-
-  Care to join our mission?
-
-  We’re always looking for ambitious individuals to help us on our journey. If you’re 
-  passionate about our mission to provide clean, accessible transport to improve urban 
-  living we want to hear from you!
-
-  Say Hello
+Sign up and Scoot off today
 
 
-
-  Why join us?
-
-  01
-  Our tech
-  We’re using cutting edge technology to drive accessible urban transportation forward. 
-  Our fully electric scooters are a joy to ride!
-
-  02
-  Our integrity
-  We are fully committed to deliver a great yet safe, sustainable micro-mobility experience 
-  in every city we serve.
-
-  03
-  Our community
-  We support every community we serve. All workers are paid a living wage based on their 
-  location and are Scoot employees.
-
-  
-
-  General Manager
-  Jakarta, Indonesia
-  Apply
-
-  UI/UX Designer
-  Yokohama, Japan
-  Apply
-
-  Blog Content Copywriter
-  New York, United States
-  Apply
-
-  Graphic Designer
-  New York, United States
-  Apply
-
-  Fleet Supervisor
-  Jakarta, Indonesia
-  Apply
-
-  UX Analyst
-  London, United Kingdom
-  Apply
-
-  
-
-  Sign up and Scoot off today
-
-
-
-  About
-  Location
-  Careers
+About
+Location
+Careers
 
 </body>
 </html>

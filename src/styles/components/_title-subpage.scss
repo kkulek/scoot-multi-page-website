@@ -1,0 +1,50 @@
+//Title pictures for subpages
+$mobile: (about: "../assets/images/about-hero-mobile.jpg", careers: "../assets/images/careers-locations-hero-mobile.jpg", locations: "../assets/images/careers-locations-hero-mobile.jpg");
+$tablet: (about: "../assets/images/about-hero-tablet.jpg", careers: "../assets/images/careers-locations-hero-tablet.jpg", locations: "../assets/images/careers-locations-hero-tablet.jpg");
+$desktop: (about: "../assets/images/about-hero-desktop.jpg", careers: "../assets/images/careers-locations-hero-desktop.jpg", locations: "../assets/images/careers-locations-hero-desktop.jpg");
+
+@mixin subpage-title($site) {
+  .title {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: rem(160px);
+    margin-bottom: rem(72px);
+    background-image: url(map-get($mobile, $site));
+
+    @include breakpoint-up(medium) {
+      background-image: url(map-get($tablet, $site));
+      height: rem(200px);
+      margin-bottom: rem(144px);
+
+      &:after {
+        content: url("../assets/patterns/white-circles.svg");
+        position: absolute;
+        top: 50%;
+        right: rem(-20px);
+        transform: translateY(-50%);
+      }
+    }
+
+    @include breakpoint-up(large) {
+      background-image: url(map-get($desktop, $site));
+      margin-bottom: rem(120px);
+    }
+
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      @include breakpoint-up(medium) {
+        justify-content: flex-start;
+      }
+    }
+
+    h1 {
+      color: $neutralLightest;
+    }
+  }
+}
