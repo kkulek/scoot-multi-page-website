@@ -907,6 +907,7 @@ h2 {
   }
   .benefits__visual--city:before {
     left: -345%;
+    right: 0;
   }
 }
 @media (min-width: 64em) {
@@ -933,12 +934,14 @@ h2 {
   background-position: center;
   background-size: cover;
   height: 10rem;
+  margin-bottom: 4.5rem;
   background-image: url("../assets/images/about-hero-mobile.jpg");
 }
 @media (min-width: 40em) {
   .title {
     background-image: url("../assets/images/about-hero-tablet.jpg");
     height: 12.5rem;
+    margin-bottom: 9rem;
   }
   .title:after {
     content: url("../assets/patterns/white-circles.svg");
@@ -951,6 +954,7 @@ h2 {
 @media (min-width: 64em) {
   .title {
     background-image: url("../assets/images/about-hero-desktop.jpg");
+    margin-bottom: 7.5rem;
   }
 }
 .title__container {
@@ -966,6 +970,111 @@ h2 {
 }
 .title h1 {
   color: hsl(214deg, 37%, 96%);
+}
+
+.benefits {
+  margin-bottom: 10rem;
+}
+.benefits__visual--mobility {
+  background-image: url("../assets/images/digital-era.jpg");
+}
+.benefits__visual--urban {
+  background-image: url("../assets/images/better-living.jpg");
+}
+@media (min-width: 40em) {
+  .benefits__visual--urban:before {
+    left: -345%;
+  }
+}
+@media (min-width: 64em) {
+  .benefits__visual--urban:before {
+    left: -115%;
+    right: 0;
+  }
+}
+
+.values {
+  text-align: center;
+}
+.values__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media (min-width: 64em) {
+  .values__list {
+    flex-direction: row;
+    gap: 5rem;
+  }
+}
+.values__value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: 21rem;
+}
+@media (min-width: 40em) {
+  .values__value {
+    padding-top: 2rem;
+  }
+}
+.values__value:before {
+  content: "01";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-family: "Space Mono", sans-serif;
+  color: hsl(214deg, 37%, 96%);
+  background-color: hsl(40deg, 97%, 58%);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  z-index: 1;
+}
+.values__value:after {
+  content: "";
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  background-image: url("../assets/images/our-tech.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transform: translate(-50%, -100%);
+}
+.values__value:nth-of-type(2):before {
+  content: "02";
+}
+.values__value:nth-of-type(2):after {
+  background-image: url("../assets/images/our-integrity.jpg");
+}
+.values__value:nth-of-type(3):before {
+  content: "03";
+}
+.values__value:nth-of-type(3):after {
+  background-image: url("../assets/images/our-community.jpg");
+}
+.values__name {
+  font-size: 1.5rem;
+  font-family: "Space Mono", sans-serif;
+  color: hsl(216deg, 17%, 35%);
+}
+.values__body {
+  max-width: 25rem;
+}
+@media (min-width: 64em) {
+  .values__body {
+    max-width: 100%;
+  }
 }
 
 .cta {
