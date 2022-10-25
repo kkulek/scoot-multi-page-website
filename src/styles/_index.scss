@@ -278,9 +278,6 @@
 .benefits {
   margin-bottom: rem(200px);
 
-  &__list {
-  }
-
   &__benefit {
     display: flex;
     flex-direction: column;
@@ -303,52 +300,65 @@
   }
 
   &__content {
-    $margin-bottom: rem(32px);
     flex-basis: 45%;
 
+    h2, p {
+      margin-bottom:rem(32px);
+    }
+
     @include breakpoint-up(medium) {
-      $margin-bottom: rem(70px);
+      h2, p {
+        margin-bottom: rem(40px);
+      }
     }
 
     @include breakpoint-up(large) {
-      $margin-bottom: rem(24px);
-      width: 43%;
-    }
-
-
-    h2 {
-      margin-bottom: $margin-bottom;
-    }
-
-    p {
-      margin-bottom: $margin-bottom;
-
-      @include breakpoint-up(large) {
-        padding-right: rem(80px);
+      h2, p {
+        margin-bottom: rem(24px);
       }
 
-    }
-
-    a {
-
+      p {
+        padding-right: rem(80px);
+      }
     }
   }
 
   &__visual {
     display: inline-block;
+    position: relative;
+    flex-shrink: 0;
     width: 311px;
     height: 311px;
     flex-basis: 311px;
     background-size: cover;
     background-position: center;
     border-radius: 50%;
-    flex-shrink: 0;
-    position: relative;
+    margin-bottom: rem(50px);
 
-    @include breakpoint-up(large) {
+    @include breakpoint-up(medium) {
       width: 445px;
       height: 445px;
       flex-basis: 445px;
+      margin-bottom: rem(60px);
+
+      &:before { //Top and bottom circle tablet & desktop
+        content: url("../assets/patterns/circle.svg");
+        position: absolute;
+        right: -115%;
+        top: 0;
+      }
+
+      &--city:before {
+        left: -345%; //Middle circle tablet
+      }
+    }
+
+    @include breakpoint-up(large) {
+      margin-bottom: 0;
+
+      &--city:before {
+        left: -115%; //Middle circle desktop
+      }
     }
 
     &--telemetry {
@@ -361,14 +371,6 @@
 
     &--payments {
       background-image: url("../assets/images/payments.jpg");
-    }
-
-    &:before {
-
-    }
-
-    &:after {
-
     }
   }
 }
