@@ -301,6 +301,11 @@
 
   &__content {
     flex-basis: 45%;
+    max-width: rem(450px);
+
+    @include breakpoint-up(large) {
+      max-width: 100%;
+    }
 
     h2, p {
       margin-bottom:rem(32px);
