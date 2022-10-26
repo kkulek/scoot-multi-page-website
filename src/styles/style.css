@@ -1315,12 +1315,138 @@ h2 {
 }
 .jobs__button {
   padding: 0.9375rem 3.5rem;
-  width: 90%;
-  max-width: 300px;
+  width: 17.5rem;
+  display: inline-block;
 }
 @media (min-width: 40em) {
   .jobs__button {
     width: 11.25rem;
+  }
+}
+
+.title {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 10rem;
+  margin-bottom: 4.5rem;
+  background-image: url("../assets/images/careers-locations-hero-mobile.jpg");
+}
+@media (min-width: 40em) {
+  .title {
+    background-image: url("../assets/images/careers-locations-hero-tablet.jpg");
+    height: 12.5rem;
+    margin-bottom: 9rem;
+  }
+  .title:after {
+    content: url("../assets/patterns/white-circles.svg");
+    position: absolute;
+    top: 50%;
+    right: -1.25rem;
+    transform: translateY(-50%);
+  }
+}
+@media (min-width: 64em) {
+  .title {
+    background-image: url("../assets/images/careers-locations-hero-desktop.jpg");
+    margin-bottom: 7.5rem;
+  }
+}
+.title__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+@media (min-width: 40em) {
+  .title__container {
+    justify-content: flex-start;
+  }
+}
+.title h1 {
+  color: hsl(214deg, 37%, 96%);
+}
+
+.map {
+  margin-bottom: 4.5rem;
+}
+@media (min-width: 64em) {
+  .map {
+    margin-bottom: 7.5rem;
+  }
+}
+.map__visual {
+  background-image: url("../assets/images/world-map-mobile.png");
+  padding-bottom: 49%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 40em) {
+  .map__visual {
+    background-image: url("../assets/images/world-map-tablet.png");
+    padding-bottom: 49%;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 64em) {
+  .map__visual {
+    background-image: url("../assets/images/world-map-desktop.png");
+    padding-bottom: 49%;
+  }
+}
+.map__city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Space Mono", sans-serif;
+  height: 4.5rem;
+  font-size: 1.5rem;
+  background: hsl(39deg, 100%, 94%);
+  color: hsl(216deg, 17%, 35%);
+  margin-bottom: 1rem;
+}
+
+.message-us {
+  margin-bottom: 4.5rem;
+}
+@media (min-width: 40em) {
+  .message-us {
+    margin-bottom: 7.5rem;
+  }
+}
+.message-us__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  text-align: center;
+}
+@media (min-width: 64em) {
+  .message-us__content {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+.message-us__title {
+  font-size: 3rem;
+  flex-basis: 35%;
+}
+.message-us__body {
+  flex-basis: 45%;
+}
+.message-us__button {
+  flex-basis: 20%;
+  max-width: 187px;
+}
+
+@media (min-width: 40em) {
+  .only-mobile {
+    display: none;
   }
 }
 

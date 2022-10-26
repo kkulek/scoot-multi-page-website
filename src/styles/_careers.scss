@@ -50,8 +50,8 @@
 
   &__button {
     padding: rem(15px) rem(56px);
-    width: 90%;
-    max-width: 300px;
+    width: rem(280px);
+    display: inline-block;
 
     @include breakpoint-up(medium) {
       width: rem(180px);
