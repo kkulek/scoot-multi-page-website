@@ -1,14 +1,51 @@
 @include subpage-title(locations);
 
+.map {
+  margin-bottom: rem(72px);
+
+  @include breakpoint-up(large) {
+    margin-bottom: rem(120px);
+  }
+
+  &__visual {
+    background-image: url("../assets/images/world-map-mobile.png");
+    padding-bottom: 49%; // proportion: 622px x 304px
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+    margin-bottom: rem(40px);
+
+    @include breakpoint-up(medium) {
+      background-image: url("../assets/images/world-map-tablet.png");
+      padding-bottom: 49%; // proportion: 689px x 337px
+      margin-bottom: 0;
+    }
+
+    @include breakpoint-up(large) {
+      background-image: url("../assets/images/world-map-desktop.png");
+      padding-bottom: 49%; // proportion: 1110px x 543px
+    }
+  }
+
+  &__city {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-accent;
+    height: rem(72px);
+    font-size: rem(24px);
+    background: $neutralAccent;
+    color: $primaryFontDark;
+    margin-bottom: rem(16px);
+  }
+}
+
 .message-us {
   margin-bottom: rem(72px);
 
   @include breakpoint-up(medium) {
     margin-bottom: rem(120px);
-  }
-
-  &__container {
-
   }
 
   &__content {
@@ -37,5 +74,11 @@
   &__button {
     flex-basis: 20%;
     max-width: 187px;
+  }
+}
+
+.only-mobile {
+  @include breakpoint-up(medium) {
+    display: none;
   }
 }
