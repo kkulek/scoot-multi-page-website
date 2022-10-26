@@ -1,5 +1,7 @@
 # Multi page website using SCSS
 
+## [>>> Live preview](https://benevolent-llama-1540a9.netlify.app)
+
 ![Design preview](./preview.jpg)
 
 ### Expected Behaviour
