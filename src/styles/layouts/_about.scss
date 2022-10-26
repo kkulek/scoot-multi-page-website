@@ -6,11 +6,11 @@
   &__visual {
 
     &--mobility {
-      background-image: url("../assets/images/digital-era.jpg");
+      background-image: url("../../assets/images/digital-era.jpg");
     }
 
     &--urban {
-      background-image: url("../assets/images/better-living.jpg");
+      background-image: url("../../assets/images/better-living.jpg");
 
       @include breakpoint-up(medium) {
         &:before { //spacing for gray circle
@@ -95,7 +95,7 @@
     }
 
     &:after {
-      content: url("../assets/icons/chevron.svg");
+      content: url("../../assets/icons/chevron.svg");
       position: absolute;
       top: 50%;
       right: $inner-padding-accordion;

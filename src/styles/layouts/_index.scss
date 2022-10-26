@@ -4,20 +4,20 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url("../assets/images/home-hero-mobile.jpg");
+  background-image: url("../../assets/images/home-hero-mobile.jpg");
 
   @include breakpoint-up(medium) {
-    background-image: url("../assets/images/home-hero-tablet.jpg");
+    background-image: url("../../assets/images/home-hero-tablet.jpg");
   }
 
   @include breakpoint-up(large) {
-    background-image: url("../assets/images/home-hero-desktop.jpg");
+    background-image: url("../../assets/images/home-hero-desktop.jpg");
   }
 
   //Circles tablet and desktop
   @include breakpoint-up(medium) {
     &:after {
-      content: url("../assets/patterns/white-circles.svg");
+      content: url("../../assets/patterns/white-circles.svg");
       position: absolute;
       right: 0;
       bottom: 10%;
@@ -32,7 +32,7 @@
 
   @include breakpoint-up(xlarge) {
     &:after {
-      content: url("../assets/patterns/white-circles.svg");
+      content: url("../../assets/patterns/white-circles.svg");
       right: 2%;
       bottom: 25.5%;
     }
@@ -69,14 +69,14 @@
       //Arrows desktop
       @include breakpoint-up(large) {
         &:before {
-          content: url("../assets/patterns/line.svg");
+          content: url("../../assets/patterns/line.svg");
           position: absolute;
           left: -55%;
           top: 28%;
         }
 
         &:after {
-          content: url("../assets/patterns/right-arrow.svg");
+          content: url("../../assets/patterns/right-arrow.svg");
           position: absolute;
           left: 100%;
           top: 30%;
@@ -95,7 +95,7 @@
 
     @include breakpoint-down(medium) {
       &:after {
-        content: url("../assets/patterns/right-arrow.svg");
+        content: url("../../assets/patterns/right-arrow.svg");
         position: absolute;
         left: -235%;
         bottom: -300%;
@@ -218,15 +218,15 @@
     }
 
     &--locate {
-      background-image: url("../assets/icons/locate.svg");
+      background-image: url("../../assets/icons/locate.svg");
     }
 
     &--scooter {
-      background-image: url("../assets/icons/scooter.svg");
+      background-image: url("../../assets/icons/scooter.svg");
     }
 
     &--ride {
-      background-image: url("../assets/icons/ride.svg");
+      background-image: url("../../assets/icons/ride.svg");
     }
 
     //Tablet vertical line across features start
@@ -311,7 +311,7 @@
       margin-bottom: rem(60px);
 
       &:before { //Top and bottom circle tablet & desktop
-        content: url("../assets/patterns/circle.svg");
+        content: url("../../assets/patterns/circle.svg");
       }
     }
 
@@ -324,15 +324,15 @@
     }
 
     &--telemetry {
-      background-image: url("../assets/images/telemetry.jpg");
+      background-image: url("../../assets/images/telemetry.jpg");
     }
 
     &--city {
-      background-image: url("../assets/images/near-you.jpg");
+      background-image: url("../../assets/images/near-you.jpg");
     }
 
     &--payments {
-      background-image: url("../assets/images/payments.jpg");
+      background-image: url("../../assets/images/payments.jpg");
     }
   }
 }
