@@ -1,0 +1,834 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0-modified | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+/* make sure to set some focus styles for accessibility */
+:focus {
+  outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type=search] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  max-width: 100%;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+[hidden] {
+  display: none;
+}
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-size: 100%; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -ms-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+img {
+  border: 0; /* 1 */
+  -ms-interpolation-mode: bicubic; /* 2 */
+}
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+figure {
+  margin: 0;
+}
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+form {
+  margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0; /* 1 */
+  padding: 0;
+  white-space: normal; /* 2 */
+  *margin-left: -7px; /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%; /* 1 */
+  margin: 0; /* 2 */
+  vertical-align: baseline; /* 3 */
+  *vertical-align: middle; /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+  *overflow: visible; /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+  *height: 13px; /* 3 */
+  *width: 13px; /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto; /* 1 */
+  vertical-align: top; /* 2 */
+}
+
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.has-fade {
+  visibility: hidden;
+}
+
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    opacity: 0.9;
+    visibility: visible;
+  }
+}
+.fade-in {
+  animation: fade-in 200ms ease-in-out forwards;
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.fade-out {
+  animation: fade-out 200ms ease-in-out forwards;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+body.noscroll {
+  overflow: hidden;
+}
+
+p, a {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: hsl(217deg, 12%, 62%);
+  line-height: 1.3;
+}
+
+p {
+  font-family: "Lexend Deca", sans-serif;
+  line-height: 1.5625rem;
+}
+
+a {
+  font-family: "Space Mono", sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  line-height: 1.15;
+  font-family: "Space Mono", sans-serif;
+  color: hsl(216deg, 17%, 35%);
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+@media (min-width: 40em) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+}
+@media (min-width: 40em) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+.container {
+  width: 90vw;
+  max-width: 76.25rem;
+  padding: 0 3.125rem;
+  margin: 0 auto;
+}
+@media (min-width: 64em) {
+  .container {
+    padding: 0;
+  }
+}
+
+.button {
+  background-color: hsl(40deg, 97%, 58%);
+  padding: 1.0625rem 2.5rem;
+  color: hsl(214deg, 37%, 96%);
+  display: inline-block;
+  border: 3px solid hsl(40deg, 97%, 58%);
+  transition: background-color 200ms ease-in-out;
+  text-align: center;
+  white-space: nowrap;
+}
+.button:hover {
+  background: transparent;
+  color: hsl(40deg, 97%, 58%);
+}
+
+@media (max-width: 39.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 40em) {
+  .hide-for-tablet-desktop {
+    display: none;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+@media (min-width: 40em) {
+  .header {
+    height: 6rem;
+    gap: 2rem;
+  }
+}
+.header .overlay {
+  opacity: 0;
+  position: fixed;
+  top: 4rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.header__logo {
+  margin: 0 auto;
+}
+@media (min-width: 40em) {
+  .header__logo {
+    margin: 0;
+  }
+}
+.header.open .header__toggle > span:first-child {
+  transform: translateY(6px) rotate(45deg);
+}
+.header.open .header__toggle > span:nth-child(2) {
+  opacity: 0;
+}
+.header.open .header__toggle > span:last-child {
+  transform: translateY(-12px) rotate(-45deg);
+}
+.header__toggle {
+  position: absolute;
+  z-index: 1;
+}
+.header__toggle > span {
+  display: block;
+  width: 1.375rem;
+  height: 0.25rem;
+  background-color: hsl(40deg, 97%, 58%);
+  transition: all 300ms ease-in-out;
+}
+.header__toggle > span:not(:last-child) {
+  margin-bottom: 0.3125rem;
+}
+.header__toggle > span:last-child {
+  margin-bottom: -0.3125rem;
+}
+.header__menu {
+  position: absolute;
+  left: 0;
+  top: 4rem;
+  padding-left: 5vw;
+  height: calc(100vh - 4rem);
+  background: hsl(215deg, 14%, 23%);
+  width: 100%;
+  z-index: 2;
+}
+.header__menu a {
+  display: block;
+  color: hsl(212deg, 41%, 93%);
+}
+.header__menu a:first-of-type {
+  margin-top: 6vh;
+}
+.header__menu a:not(:first-of-type) {
+  margin-top: 1.5rem;
+}
+.header__menu .button {
+  position: absolute;
+  display: block;
+  bottom: 3vh;
+}
+.header__links {
+  justify-self: flex-start;
+  flex-grow: 2;
+  margin-left: 1.5rem;
+}
+.header__links .header__link:not(:first-of-type) {
+  margin-left: 1rem;
+}
+.header__link:hover {
+  color: hsl(40deg, 97%, 58%);
+}
+@media (max-width: 63.9375em) {
+  .header__button {
+    padding: 0.875rem 1.125rem;
+    position: absolute;
+    right: 4%;
+  }
+}
+
+.cta {
+  background-color: hsl(216deg, 17%, 35%);
+  background-image: url("../assets/patterns/semi-circles.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+@media (min-width: 64em) {
+  .cta {
+    background-position-x: right;
+  }
+}
+.cta .container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 5.625rem 0;
+}
+@media (min-width: 64em) {
+  .cta .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.cta h3 {
+  text-align: center;
+  color: hsl(214deg, 37%, 96%);
+  font-size: 2rem;
+  padding: 0 2rem;
+}
+@media (min-width: 40em) {
+  .cta h3 {
+    font-size: 3rem;
+    padding: 0 7.5rem;
+  }
+}
+@media (min-width: 64em) {
+  .cta h3 {
+    text-align: left;
+    padding: 0 7.5rem 0 0;
+    max-width: 25ch;
+  }
+}
+.cta__icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+.cta__icon {
+  max-height: 2.5rem;
+  width: 100%;
+}
+@media (min-width: 40em) {
+  .cta__icon {
+    max-height: 3.5rem;
+  }
+}
+
+footer {
+  background-color: hsl(215deg, 14%, 23%);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 27.375rem;
+  padding-top: 64px;
+  padding-bottom: 88px;
+}
+@media (min-width: 40em) {
+  .footer {
+    flex-direction: row;
+    gap: 2rem;
+    height: 6rem;
+    padding: 0;
+  }
+}
+.footer__logo {
+  filter: brightness(0) saturate(100%) invert(96%) sepia(4%) saturate(0%) hue-rotate(299deg) brightness(102%) contrast(106%);
+}
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1.5rem;
+  padding-bottom: 28px;
+}
+@media (min-width: 40em) {
+  .footer__links {
+    display: inline-block;
+    justify-self: flex-start;
+    flex-grow: 2;
+    text-align: left;
+    margin-left: 1.5rem;
+    padding: 0;
+  }
+}
+@media (min-width: 40em) {
+  .footer__link:not(:first-of-type) {
+    margin-left: 1rem;
+  }
+}
+.footer__link:hover {
+  color: hsl(40deg, 97%, 58%);
+}
+.footer__social-media {
+  display: flex;
+  gap: 1rem;
+}
+.footer__social-media a {
+  font-size: 0.5625rem;
+}
+.footer__icon {
+  max-width: 1.5rem;
+  max-height: 1.5rem;
+}
+.footer__icon:hover {
+  filter: brightness(0) saturate(100%) invert(97%) sepia(1%) saturate(2568%) hue-rotate(181deg) brightness(96%) contrast(100%);
+}
+
+.title {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 10rem;
+  margin-bottom: 4.5rem;
+  background-image: url("../assets/images/careers-locations-hero-mobile.jpg");
+}
+@media (min-width: 40em) {
+  .title {
+    background-image: url("../assets/images/careers-locations-hero-tablet.jpg");
+    height: 12.5rem;
+    margin-bottom: 9rem;
+  }
+  .title:after {
+    content: url("../assets/patterns/white-circles.svg");
+    position: absolute;
+    top: 50%;
+    right: -1.25rem;
+    transform: translateY(-50%);
+  }
+}
+@media (min-width: 64em) {
+  .title {
+    background-image: url("../assets/images/careers-locations-hero-desktop.jpg");
+    margin-bottom: 7.5rem;
+  }
+}
+.title__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+@media (min-width: 40em) {
+  .title__container {
+    justify-content: flex-start;
+  }
+}
+.title h1 {
+  color: hsl(214deg, 37%, 96%);
+}
+
+.map {
+  margin-bottom: 4.5rem;
+}
+@media (min-width: 64em) {
+  .map {
+    margin-bottom: 7.5rem;
+  }
+}
+.map__visual {
+  background-image: url("../assets/images/world-map-mobile.png");
+  padding-bottom: 49%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 40em) {
+  .map__visual {
+    background-image: url("../assets/images/world-map-tablet.png");
+    padding-bottom: 49%;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 64em) {
+  .map__visual {
+    background-image: url("../assets/images/world-map-desktop.png");
+    padding-bottom: 49%;
+  }
+}
+.map__city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Space Mono", sans-serif;
+  height: 4.5rem;
+  font-size: 1.5rem;
+  background: hsl(39deg, 100%, 94%);
+  color: hsl(216deg, 17%, 35%);
+  margin-bottom: 1rem;
+}
+
+.message-us {
+  margin-bottom: 4.5rem;
+}
+@media (min-width: 40em) {
+  .message-us {
+    margin-bottom: 7.5rem;
+  }
+}
+.message-us__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  text-align: center;
+}
+@media (min-width: 64em) {
+  .message-us__content {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+.message-us__title {
+  font-size: 3rem;
+  flex-basis: 35%;
+}
+.message-us__body {
+  flex-basis: 45%;
+}
+.message-us__button {
+  flex-basis: 20%;
+  max-width: 187px;
+}
+
+@media (min-width: 40em) {
+  .only-mobile {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=locations.css.map */

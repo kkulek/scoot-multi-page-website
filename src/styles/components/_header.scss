@@ -19,7 +19,6 @@ $headerHeightTableTDesktop: rem(96px);
     right: 0;
     bottom: 0;
     left: 0;
-    background: hsl(0, 0%, 20%);
     z-index: 1;
   }
 
@@ -76,7 +75,7 @@ $headerHeightTableTDesktop: rem(96px);
     padding-left: calc((100vw - $containerWidth) / 2);
     height: calc(100vh - $headerHeightMobile);
     background: $primaryDark;
-    width: rem(256px);
+    width: 100%;
     z-index: 2;
 
     a {
@@ -98,12 +97,14 @@ $headerHeightTableTDesktop: rem(96px);
       bottom: 3vh;
     }
   }
+
   //Hamburger end
 
   &__links {
     justify-self: flex-start;
     flex-grow: 2;
     margin-left: 1.5rem;
+
   }
 
   &__links &__link {
@@ -120,7 +121,9 @@ $headerHeightTableTDesktop: rem(96px);
 
   &__button {
     @include breakpoint-down(medium) {
-      padding: rem(14px) rem(22px);
+      padding: rem(14px) rem(18px);
+      position: absolute;
+      right: 4%;
     }
   }
 }

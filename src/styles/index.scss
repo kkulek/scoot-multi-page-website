@@ -1,3 +1,17 @@
+@import "base/reset";
+
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/functions';
+@import 'abstracts/animations';
+
+@import 'base/globals';
+@import 'components/header';
+@import 'components/benefits';
+@import 'components/values';
+@import 'components/bottom-cta';
+@import 'components/footer';
+
 //Section Hero
 .hero {
   position: relative;
@@ -329,6 +343,7 @@
 
     &--city {
       background-image: url("../assets/images/near-you.jpg");
+
     }
 
     &--payments {
