@@ -16,5 +16,6 @@
 
 .idea
 .vscode
+/node_modules
 
 .README-template.md
